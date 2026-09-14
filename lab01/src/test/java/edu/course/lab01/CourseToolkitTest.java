@@ -54,7 +54,7 @@ class CourseToolkitTest {
     }
 
     @Test
-    void returnsTrueForPalindrom() {
+    void returnsTrueForPalindrome() {
         boolean result = CourseToolkit.isPalindrome("ОззО");
 
         assertTrue(result);
@@ -63,6 +63,13 @@ class CourseToolkitTest {
     @Test
     void returnsFalseForCaseError() {
         boolean result = CourseToolkit.isPalindrome("ОзЗО");
+
+        assertFalse(result);
+    }
+
+    @Test
+    void returnsFalseForNotPalindrome() {
+        boolean result = CourseToolkit.isPalindrome("1234");
 
         assertFalse(result);
     }
@@ -85,7 +92,7 @@ class CourseToolkitTest {
         int[] numbers = {1, -2, -5};
         double result = CourseToolkit.average(numbers);
 
-        assertEquals(-2, result, 1e-9);
+        assertEquals(-2, result, 1e-9   );
     }
 
     @Test
